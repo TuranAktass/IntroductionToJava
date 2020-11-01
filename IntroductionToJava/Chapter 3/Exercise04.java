@@ -1,4 +1,4 @@
-public class Exercise4 {
+public class Exercise04 {
     public static void main(String args[]){
         int random = (int)(Math.random() * 13);
         switch(random){

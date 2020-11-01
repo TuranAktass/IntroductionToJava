@@ -13,7 +13,7 @@ public class Exercise14 {
         else
             System.out.println("Your guess is incorrect");
         }
-
+        sc.close();
 
     }
     
