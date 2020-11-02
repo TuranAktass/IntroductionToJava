@@ -5,7 +5,7 @@ public class Exercise14 {
         for(int i=0;i<10;i++){
             int coin = (int)(Math.random() * 2);
 
-        System.out.println("Head or Tail (1 for head abd 0 for tail)");
+        System.out.println("Head or Tail (1 for head and 0 for tail)");
         int input = sc.nextInt();
 
         if(input == coin)
