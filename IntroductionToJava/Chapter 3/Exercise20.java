@@ -19,7 +19,7 @@ public class Exercise20 {
         System.out.println("Enter the wind speed (>=2) in miles per hour ");
         wSpeed = sc.nextDouble();
 
-        if (temp < -58 || temp > 41 || (wSpeed < 2))
+        if ((temp < -58 || temp > 41) && (wSpeed < 2))
             System.out.println("The input is invalid! The temperature and the wind speed are not in the range!");
         else if (temp < -58 || temp > 41)
             System.out.println("The input is invalid! The temperature is not in the range!");
