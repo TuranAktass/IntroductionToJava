@@ -7,7 +7,7 @@ public class Exercise04_18 {
         String input = sc.nextLine();
         char major = input.charAt(0);
         int year = (int) (input.charAt(1));
-        if (year < 1 ||year > 4 || major != 'M' || major != 'C' || major != 'I')
+        if (year < 1 ||year > 4 || major!= 'M' || major != 'C' || major != 'I')
             System.out.println("Invalid Input!");
         else {
             switch (major) {
