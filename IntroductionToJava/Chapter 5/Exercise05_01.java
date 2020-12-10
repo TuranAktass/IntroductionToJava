@@ -15,18 +15,16 @@ public class Exercise05_01 {
         while (number != 0) {
             if (number > 0) {
                 positive++;
-            } 
-            else if (number < 0) {
+            } else if (number < 0) {
                 negative++;
-            }
-            else{
+            } else {
                 count--;
             }
             count++;
             total += number;
             number = input.nextInt();
         }
-        average = (double)(total) / (double)(count);
+        average = (double) (total) / (double) (count);
 
         System.out.println("The number of positives is : " + positive);
         System.out.println("The number of negatives is : " + negative);
@@ -35,5 +33,4 @@ public class Exercise05_01 {
 
         input.close();
     }
-
 }
