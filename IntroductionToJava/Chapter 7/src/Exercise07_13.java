@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import java.util.Arrays;
 public class Exercise07_13{
 
@@ -17,4 +18,9 @@ public class Exercise07_13{
 
         return random;
     }
+=======
+
+public class Exercise07_13 {
+
+>>>>>>> Stashed changes
 }
