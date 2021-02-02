@@ -1,65 +1,70 @@
 import java.util.Scanner;
+
 public class Exercise07_21 {
 
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
-		
-		System.out.println("Enter the number of balls to drop : ");
+
+		System.out.println("Enter the number of balls to drop :");
 		int numberOfBalls = input.nextInt();
-		
+
 		System.out.println("Enter the number of slots in the bean machine : ");
 		int numberOfSlots = input.nextInt();
+
+		int[] slots = new int[numberOfSlots];
+
+		game(numberOfBalls, slots);
 		
-		int [] slots = new int[numberOfSlots];
-		
-		for(int i = 0; i < numberOfBalls; i++) {
-			String str = path();
-			
-			System.out.println(str);
-			M2(slots, str);
-		}
-		
-		for(int i = 0; i < slots.length; i++) {
-			System.out.printf("Slot[%d] : %d \n" , i , slots[i]);
-		}
-	
 		input.close();
 	}
-	
-	public static String path() {		
-		String result = "";
-		
-		for(int i = 0; i < 7; i++) {
-			int random = (int)(Math.random() * 2) + 1;
-			
-			if(random == 1)
-				result += "R";
-			else if(random == 2)
-				result += "L";
+
+	public static String path(int nBalls, int[] slots) {
+		String path = "";
+
+		for (int i = 0; i < slots.length - 1; i++) {
+			int random = (int) (Math.random() * 2) + 1;
+
+			if (random == 1)
+				path += "L";
+			else if (random == 2)
+				path += "R";
+		}
+
+		return path;
+	}
+
+	public static void game(int nBalls, int[] slots) {
+
+		for (int i = 0; i < nBalls; i++) {
+			String path = path(nBalls, slots);
+			System.out.println(path);
+			int counter = rCounter(path, slots);
+
+			slots[counter]++;
+		}
+
+		for (int i = 0; i < slots.length; i++) {
+			System.out.println("Slot[" + i + "] : " + slots[i]);
 		}
 		
-		return result;
+		drawHistogram(slots);
 	}
-	
-	public static void M2 (int [] slots, String path) {
+
+	public static int rCounter(String path, int[] slots) {
 		int counter = 0;
-		char [] array = new char[path.length()];
-		array = path.toCharArray();
-		
-		for(int i = 0; i < slots.length; i++) {
-			if(array[i] == 'R')
+
+		for (int i = 0; i < slots.length - 1; i++) {
+			if (path.charAt(i) == 'R')
 				counter++;
 		}
-		
-		slots[counter]++;
+
+		return counter;
 	}
-	
-	public static void drawSlots(int [] slots) {
+
+	public static void drawHistogram(int[] slots) {
 		
-		for(int i = 0; i < slots.length; i++) {
-			for(int j = 0; j < i; j++) {
-				
-			}
-		}
+		
 	}
+
 }
+
