@@ -15,7 +15,7 @@ public class Exercise08_02 {
 		}
 
 		System.out.println("Sum of the elements in the major diagonal is : " + sumMajorDiagonal(matrix));
-		
+
 		input.close();
 	}
 
