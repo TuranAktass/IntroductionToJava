@@ -56,7 +56,6 @@ public class Exercise08_06 {
 	}
 
 	public static void displayMatrix(double[][] m) {
-
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[0].length; j++) {
 				System.out.printf("%.1f ", m[i][j]);

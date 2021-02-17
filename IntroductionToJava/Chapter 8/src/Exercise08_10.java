@@ -15,7 +15,6 @@ public class Exercise08_10 {
 	}
 	
 	public static void displayMatrix(int[][] m) {
-
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[0].length; j++) {
 				System.out.print(m[i][j] + " ");
@@ -38,6 +37,7 @@ public class Exercise08_10 {
 			}
 		}
 		int largestRowIndex = findMax(rows);
+		
 		return largestRowIndex;		
 	}
 	
@@ -52,9 +52,9 @@ public class Exercise08_10 {
 				
 				cols[i] = counter;
 			}
-		}
-		
+		}	
 		int largestColIndex = findMax(cols);
+		
 		return largestColIndex;
 	}
 	
