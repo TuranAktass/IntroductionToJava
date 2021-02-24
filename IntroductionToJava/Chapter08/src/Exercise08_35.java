@@ -26,5 +26,6 @@ public class Exercise08_35 {
 	
 	public static int [] findLargestBlock(int [][] m) {
 		
+		return m[0];
 	}
 }

@@ -2,8 +2,6 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Exercise08_20 {
-	// board(i-j) == 1 => RED | == -1 => YELLOW
-	// turn == 1 => RED | == -1 => YELLOW
 	public static int turn = 1;
 	public static String winner = "";
 
@@ -12,14 +10,12 @@ public class Exercise08_20 {
 
 		int[][] board = newBoard();
 		int turn = 1;
-		boolean end = win(board);
 
 		displayBoard(board);
 
 		do {
 			dropDisk(board, input);
-			end = win(board);
-		} while (end);
+		} while (win(board));
 	}
 
 	public static int[][] newBoard() {
