@@ -1,3 +1,4 @@
+import javafx.animation.FadeTransition;
 import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -10,7 +11,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class E15_24 extends Application {
+public class E15_26 extends Application {
     public static void main(String[] args) throws Exception {
         launch(args);
     }
@@ -35,9 +36,23 @@ public class E15_24 extends Application {
         pt.setAutoReverse(true);
         pt.play();
 
+        FadeTransition ft = new FadeTransition(Duration.millis(5000), circle);
+        ft.setFromValue(1.0);
+        ft.setToValue(0.1);
+        ft.setCycleCount(Timeline.INDEFINITE);
+        ft.setAutoReverse(true);
+        ft.play();
+
         pane.getChildren().addAll(arc, circle);
-        pane.setOnMousePressed(e -> pt.pause());
-        pane.setOnMouseReleased(e -> pt.play());
+        pane.setOnMousePressed(e -> {
+            pt.pause();
+            ft.pause();
+
+        });
+        pane.setOnMouseReleased(e -> {
+            pt.play();
+            ft.play();
+        });
 
         Scene scene = new Scene(pane, WIDTH, HEIGHT);
         primaryStage.setTitle("E15_24");

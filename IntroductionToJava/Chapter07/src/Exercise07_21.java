@@ -47,7 +47,6 @@ public class Exercise07_21 {
 			System.out.println("Slot[" + i + "] : " + slots[i]);
 		}
 		
-		drawHistogram(slots);
 	}
 
 	public static int rCounter(String path, int[] slots) {
@@ -60,11 +59,5 @@ public class Exercise07_21 {
 
 		return counter;
 	}
-
-	public static void drawHistogram(int[] slots) {
-		
-		
-	}
-
 }
 

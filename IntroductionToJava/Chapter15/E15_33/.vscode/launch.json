@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "vmArgs": "--module-path /Users/turan/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BeanMachine",
+            "request": "launch",
+            "mainClass": "BeanMachine",
+            "projectName": "E15_33_1d3520b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E15_33",
+            "vmArgs": "--module-path /Users/turan/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "request": "launch",
+            "mainClass": "E15_33",
+            "projectName": "E15_33_1d3520b9"
+        }
+    ]
+}
